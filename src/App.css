@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=DM+Serif+Display:ital@0;1&family=Delius&family=Gochi+Hand&family=Kreon:wght@300..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Playwrite+HU:wght@100..400&family=Rubik+Wet+Paint&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Courses   */
+.slider-container1 {
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+  }
+  
+  .slider-track1 {
+    display: flex;
+    gap: 30px;
+    animation: scroll1 15s linear infinite; 
+  }
+  
+  .slider-track1 > div {
+    flex: 0 0 auto; 
+    width: 300px;
+    height: 200px; 
+  }
+  
+
+  @keyframes scroll1 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+  .slider-container1:hover .slider-track1 {
+    animation-play-state: paused;
+  }
+
+
+  .slider-container1::before,
+.slider-container1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slider-container1::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.422), rgba(255, 255, 255, 0));
+}
+
+.slider-container1::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.heading {
+  @apply text-3xl font-dm px-12 mt-14
+}
+.slick-prev:before, .slick-next:before {
+  color: black;
+}
+
+
+
+.slider-track2 {
+  display: flex;
+  gap: 30px;
+  animation: scroll1 15s linear infinite; 
+}
+
+.slider-track2 > div {
+  flex: 0 0 auto; 
+  width: 200px;
+  height: 75px; 
+}
+
+
+.slider-container1:hover .slider-track2 {
+  animation-play-state: paused;
+}

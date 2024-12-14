@@ -5,7 +5,7 @@ const ViewButton = () => {
     <>
       <button
         type="submit"
-        className="mt-3 flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-[#FBC03A] backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-vblue hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-3 py-1 overflow-hidden border-2 rounded-full group"
+        className="mt-3 flex z-0 justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-[#FBC03A] backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-vblue hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative  px-3 py-1 overflow-hidden border-2 rounded-full group"
       >
         View More
         <svg

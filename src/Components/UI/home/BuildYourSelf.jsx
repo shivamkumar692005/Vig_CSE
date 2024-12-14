@@ -49,7 +49,7 @@ const BuildYourSelf = () => {
 
           <div className="absolute inset-0 bg-backColor opacity-85 rounded-r-2xl"></div>
 
-          <div className="relative z-10 flex flex-col items-center justify-center text-white p-6 space-y-6 ">
+          <div className="relative  flex flex-col items-center justify-center text-white p-6 space-y-6 ">
             <div className="text-center">
               <h2 className="text-3xl font-bold">Placements Overview</h2>
               <p className="text-lg">

@@ -1,12 +1,12 @@
-import ViewButton from "../UI/ViewButton";
+import ViewButton from "../ViewButton";
 
 const HOD = () => {
   return (
-    <div className="w-full">
+    <div className="w-full px-14">
       <h1 className="heading">
         HOD <span className="text-vblue">Message</span>
       </h1>
-      <div className="h-64 mt-2 px-7 mx-8 flex justify-between items-center ">
+      <div className="h-64 mt-4 px-7 mx-8 flex justify-between items-center ">
         <div className="text-center w-1/2 font-normal font-dm text-lg">
           <p >
             Welcome to the Department of Computer Science and Engineering,

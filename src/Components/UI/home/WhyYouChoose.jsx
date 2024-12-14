@@ -2,8 +2,8 @@ import ChooseCard from "./ChooseCard";
 
 const WhyYouChoose = () => {
   return (
-    <div className="w-full bg-yellow h-auto mt-16 p-10">
-      <h3 className="text-2xl mx-10 font-dm ">
+    <div className="w-full h-auto mt-28 p-10 bg-[#50a3ad]">
+      <h3 className="text-2xl mx-10 font-dm text-white">
         Why Should You Choose <br />
         <span className="text-vblue">Vignan University?</span>
       </h3>

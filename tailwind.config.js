@@ -6,6 +6,7 @@ export default {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      
       colors: {
         vblue: "#1152ae",
         yellow: "#FBB03B",
@@ -16,6 +17,7 @@ export default {
       },
       fontFamily: {
         dm: ["DM Serif Display"],
+        fg: ["Familjen Grotesk"]
       },
       backgroundImage: {
         bgUrl: "url('image/bg.webp')",

@@ -1,71 +1,93 @@
-import { useState } from "react";
+import  { useState } from "react";
 
+function FAQ() {
+  const [openAccordion, setOpenAccordion] = useState(null);
 
-export default function FAQ()
-{
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+  const handleAccordionToggle = (id) => {
+    if (openAccordion === id) {
+      setOpenAccordion(null); 
+    } else {
+      setOpenAccordion(id); 
+    }
   };
 
-  const faqs = [
+
+  const faqData = [
     {
-      question: "How can I apply to the Computer Science program?",
-      answer: "Applications are typically submitted online through the university's admission portal. Required documents usually include Class 12th mark sheets, entrance exam scores (such as JEE Main/Advanced for undergraduate programs), and personal statements. Specific details are available on the university's admissions page.",
+      question: "How are candidates evaluated for the Ph.D. program in Engineering?",
+      answer: "Candidates are evaluated based on academic performance, research experience, a written test, and an interview.",
     },
     {
-      question: "What are the admission requirements for the Computer Science department?",
-      answer: "Students must have completed the Higher Secondary Examination (12th grade) with at least 60% in Physics, Chemistry, and Mathematics. For undergraduate programs, a good score in entrance exams like JEE Main/Advanced or state-level CETs is essential. For postgraduate programs, exams like GATE may be required.",
+      question: "What’s the difference between full-time and part-time Ph.D. eligibility?",
+      answer: "Full-time candidates need a first-class B.Tech and M.Tech, while part-time candidates can use industry experience.",
     },
     {
-      question: "Is there any scholarship available for students?",
-      answer: "Yes, 25% of seats in each department are reserved for scholarships, based on merit and availability. Scholarships range from 25% to 75% tuition waiver, subject to maintaining 70% academic performance annually.",
+      question: "How important is the written test in the Ph.D. admission process?",
+      answer: "The written test assesses foundational knowledge and is crucial unless waived for candidates who have cleared GATE or CSIR-NET.",
     },
     {
-      question: "Are lateral entry students accepted into the program?",
-      answer: "Yes, lateral entry is available for students who have completed a three-year diploma in a relevant field with at least 60% marks.",
+      question: "How does VFSTR value prior work experience in the Ph.D. selection process?",
+      answer: "Relevant work experience adds value, contributing up to 5% of the total evaluation score.",
     },
     {
-        question: "How is student performance monitored in the department?",
-        answer: "The department uses continuous internal assessments, mid-semester exams, end-semester exams, lab assessments, and project reviews to monitor and evaluate student performance.",
+      question: "What happens after Ph.D. selection, and how are supervisors assigned?",
+      answer: "After admission, supervisors are assigned based on research interests and mutual agreement between the student and faculty.",
     },
   ];
 
   return (
-    <div className="mx-auto px-16 pt-16 pb-6 bg-white mt-7">
-      <h2 className="text-2xl font-bold font-grotesk text-gray-900 text-center mb-10">
-            Frequently Asked Questions
-      </h2>
-      <div className="grid grid-cols-1 gap-5">
-        {faqs.map((faq, index) => (
+    <div className="container my-5 py-5" style={{ marginTop: "0", backgroundColor: "#f2f1ed" }}>
+      <div className="row mx-5">
+
+        <div className="col-2 ml-5" style={{ width: "300px", position: "relative", top: "100px", left: "20px" }}>
+          <p
+            style={{
+              whiteSpace: "nowrap",
+              fontFamily: "'DM Serif Display', serif",
+              fontSize: "3rem",
+              lineHeight: "3rem",
+            }}
+          >
+            Frequently <br /> Asked <br /> Questions
+          </p>
+        </div>
+
+
+        <div className="col-3" style={{ backgroundColor: "#f2f1ed" }}>
           <div
-            key={index}
-            className="bg-white border-b-2 border-l-2 border-gray-200 rounded-2xl py-4 px-10 hover:border-blue-400">
-            <div
-              className="flex justify-between items-center cursor-pointer"
-              onClick={() => toggleFAQ(index)}>
-              <h3 className="text-base font-medium text-gray-800">{faq.question}</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-6 w-6 text-blue-600 transform transition-transform ${
-                  activeIndex === index ? "rotate-180" : "rotate-0"}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"/>
-              </svg>
-            </div>
-            {activeIndex === index && (
-              <p className="mt-4 text-gray-600">{faq.answer}</p>
-            )}
+            className="accordion"
+            id="faqAccordion"
+            style={{ width: "700px", marginLeft: "7rem", marginTop: "2rem" }}
+          >
+            {faqData.map((faq, index) => (
+              <div className="accordion-item" key={index} style={{ backgroundColor: "#f2f1ed" }}>
+                <h2 className="accordion-header" id={`heading${index}`} style={{ backgroundColor: "#f2f1ed" }}>
+                  <button
+                    className={`accordion-button ${openAccordion === index ? "" : "collapsed"}`}
+                    type="button"
+                    onClick={() => handleAccordionToggle(index)} // Toggle the accordion
+                    aria-expanded={openAccordion === index ? "true" : "false"}
+                  >
+                    {faq.question}
+                  </button>
+                </h2>
+                <div
+                  id={`collapse${index}`}
+                  className={`accordion-collapse collapse ${openAccordion === index ? "show" : ""}`}
+                  aria-labelledby={`heading${index}`}
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div className="accordion-body" style={{ backgroundColor: "#1152ae", color: "#fff" }}>
+                    {faq.answer}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
-};
+}
+
+export default FAQ;

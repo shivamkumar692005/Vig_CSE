@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=DM+Serif+Display:ital@0;1&family=Delius&family=Gochi+Hand&family=Kreon:wght@300..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Playwrite+HU:wght@100..400&family=Rubik+Wet+Paint&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=DM+Serif+Display:ital@0;1&family=Delius&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Gochi+Hand&family=Kreon:wght@300..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Playwrite+HU:wght@100..400&family=Rubik+Wet+Paint&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.modal {
+  z-index: 1050; 
+  opacity: 1;
+}
 
 
 /* Courses   */
@@ -59,7 +67,7 @@
 }
 
 .heading {
-  @apply text-3xl font-dm px-12 mt-14
+  @apply text-3xl font-dm px-12 mt-24 mb-10 text-center 
 }
 .slick-prev:before, .slick-next:before {
   color: black;

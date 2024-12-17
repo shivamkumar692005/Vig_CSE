@@ -14,25 +14,22 @@ import OurAlluminies from "../Components/UI/home/OurAlluminies";
 import ReviewSlider from "../Components/UI/home/ReviewSlider";
 import FAQ from "../Components/UI/home/FAQ";
 
-
-
 export const Home = () => {
-    return (
-     <>
+  return (
+    <>
       <Hero />
       <Courses />
       <AccAndRanks />
       <HOD />
-     <BuildYourSelf />
-     <PlacementSlider />
-     <WhyYouChoose />
-     <Facilities /> 
-     <Research />
+      <BuildYourSelf />
+      <PlacementSlider />
+      <WhyYouChoose />
+      <Facilities />
+      <Research />
       <UpcommingEvents />
       <OurAlluminies />
       <ReviewSlider />
       <FAQ />
-     </>
-    );
-  };
-  
+    </>
+  );
+};

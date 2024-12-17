@@ -10,12 +10,12 @@ const AccAndRanks = () => {
 
       <div className=" mx-16 flex gap-24 p-12 justify-center items-center">
         <div className="flex flex-col gap-5">
-        <Rankings img={'image/naac.svg'} text='NACCA+' color='text-yellow'/>
         <Rankings img={'image/abet.png'} text='ABET' color='text-vblue'/>
+        <Rankings  img={'image/nba.svg'} text='NBA' color='text-yellow'/>
         </div>
         <div className="flex flex-col gap-5">
-        <Rankings  img={'image/nba.svg'} text='NBA' color='text-vblue'/>
-        <Rankings img={'image/naac.svg'} text='NACCA+' color='text-yellow'/>
+        <Rankings img={'image/naac.png'} text='NACCA++' color='text-vblue'/>
+        <Rankings img={'image/aicte.png'} text='AICTE' color='text-yellow'/>
         </div>
       </div>
 

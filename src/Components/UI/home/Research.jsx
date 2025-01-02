@@ -151,7 +151,7 @@ function ResearchFacility(props) {
         {data.map((item, index) => (
           <div
             key={index}
-            className={`card card-compact bg-base-100 w-72 shadow-2xl mt-10 rounded-xl border-0 rounded-b-xl transition-all duration-1000 ease-in-out transform `}
+            className={`card card-compact bg-base-100 w-72 shadow-2xl mt-10 rounded-xl border-0 rounded-b-xl transition-all duration-1000 ease-in-out transform hover:shadow-lg hover:shadow-slate-600 `}
           >
             <figure>
               <img

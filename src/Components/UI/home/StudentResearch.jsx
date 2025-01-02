@@ -7,7 +7,7 @@ const StudentResearch = () => {
   return (
     <div>
       <h1 className="heading text-vblue">Student Research</h1>
-      <div className="mx-auto px-28 mt-6 w-full flex gap-5 justify-between">
+      <div className="mx-auto px-28 mt-6 w-full flex gap-5 justify-between bg-[#e7f1ff] py-6">
         <Research
           data={{
             img: "image/research.jpeg",
@@ -42,13 +42,15 @@ function Research({ data }, props) {
 
   return (
     <>
-      <div className="w-72 h-auto  p-2 flex flex-col  items-center gap-2 font-dm rounded-2xl hover:shadow-2xl hover:shadow-black transition-all duration-300 shadow-lg shadow-black ">
-        <img src={data.img} alt="" className="rounded-2xl" />
+      <div className="w-72 h-auto  p-2 flex flex-col  items-center gap-2 font-dm rounded-2xl  transition-all duration-300 shadow-xl   bg-white hover:shadow-lg hover:shadow-stone-500">
+       <div className="">
+       <img src={data.img} alt="" className="rounded-2xl" />
         <div className="w-full flex p-3 flex-col gap-2 justify-center items-center text-center">
           <h1 className="font-bold text-xl text-vblue">{data.heading}</h1>
           <p className="text-lg font-fg">{data.desc}</p>
           <ViewButton onClick={handleShow} />
         </div>
+       </div>
       </div>
 
       <Modal

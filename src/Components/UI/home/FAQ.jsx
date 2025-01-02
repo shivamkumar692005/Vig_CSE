@@ -36,7 +36,7 @@ function FAQ() {
   ];
 
   return (
-    <div className="container my-5 py-5" style={{ marginTop: "0", backgroundColor: "#f2f1ed" }}>
+    <div className="container my-5 py-5" style={{ marginTop: "0", backgroundColor: "#fff" }}>
       <div className="row mx-5">
 
         <div className="col-2 ml-5" style={{ width: "300px", position: "relative", top: "100px", left: "20px" }}>
@@ -53,7 +53,7 @@ function FAQ() {
         </div>
 
 
-        <div className="col-3" style={{ backgroundColor: "#f2f1ed" }}>
+        <div className="col-3" style={{ backgroundColor: "" }}>
           <div
             className="accordion"
             id="faqAccordion"

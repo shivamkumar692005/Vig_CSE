@@ -68,8 +68,8 @@ const data = [
 const WhyYouChoose = () => {
   return (
     <div className="w-full h-auto mt-28 p-10 bg-[#C3DDFF]">
-      <h3 className="text-2xl mx-10 font-dm text-white">
-        Why Should You Choose <br />
+      <h3 className="text-2xl mx-10 font-dm text-black text-center">
+        Why Should You Choose {" "}
         <span className="text-vblue">Vignan CSE Department ?</span>
       </h3>
       <div className="flex flex-col gap-3">

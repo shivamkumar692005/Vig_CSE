@@ -1,6 +1,6 @@
 import ViewButton from "../ViewButton";
 
-export const ReviewCard = () => {
+export const ReviewCard = ({img}) => {
     return (
       <div
         className="flex items-center justify-center bg-gray-100 py-10 mt-20"
@@ -16,7 +16,7 @@ export const ReviewCard = () => {
         
           <div className="flex-shrink-0">
             <img
-              src="image/amazone1.jpg" 
+              src={img}
               alt="Student"
               className="w-32 h-32 rounded-full object-cover border-4 border-gray-300"
             />
@@ -36,10 +36,10 @@ export const ReviewCard = () => {
         </div>
   
 
-        <div className="absolute bottom-1">
+        {/* <div className="absolute bottom-1">
         <ViewButton />
 
-        </div>
+        </div> */}
       </div>
     );
   };

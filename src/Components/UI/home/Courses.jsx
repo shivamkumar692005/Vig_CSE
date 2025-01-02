@@ -1,23 +1,22 @@
-import { motion } from "framer-motion";
-import ViewButton from "../ViewButton";
+import ApplyNowbtn from "../ApplyNowBtn";
 
 const Courses = () => {
   return (
     <>
-      <h3 className="heading">
-        Courses Offer for <br />{" "}
+      <h3 className="heading mb-1">
+        Courses Offer for {" "}
         <span className="text-vblue">Computer Science</span>
       </h3>
 
       <section
         id="about"
-        className="relative bg-white text-gray-900 w-full px-12"
+        className="relative bg-[#C3DDFF] text-gray-900 w-full px-12 py-10 mt-5"
       >
         <div className="container mx-auto px-4 text-center serif">
           <div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            <div className="p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transform hover:scale-100 transition duration-300">
+            <div className="p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transform hover:scale-100 transition duration-700 hover:shadow-slate-500 ">
               <img
                 src="image/VIN03084.JPG"
                 alt="Undergraduate Program"
@@ -30,11 +29,11 @@ const Courses = () => {
                 style={{ color: "#1152AE" }}
               >
                 <button className="underline relative top-2">Course details</button>
-                <ViewButton />
+                <ApplyNowbtn />
               </div>
             </div>
 
-            <div className="p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transform hover:scale-100 transition duration-300">
+            <div className="p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transform hover:scale-100 transition duration-700 hover:shadow-slate-500 ">
               <img
                 src="image/9.jpeg"
                 alt="Undergraduate Program"
@@ -47,11 +46,11 @@ const Courses = () => {
                 style={{ color: "#1152AE" }}
               >
                 <button className="underline relative top-2">Course details</button>
-                <ViewButton />
+                <ApplyNowbtn />
               </div>
             </div>
 
-            <div className="p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-xl transform hover:scale-100 transition duration-300">
+            <div className="p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-lg transform hover:scale-100 transition duration-700 hover:shadow-slate-500 ">
               <img
                 src="image/phd.jpg"
                 alt="PhD Program"
@@ -64,7 +63,7 @@ const Courses = () => {
                 style={{ color: "#1152AE" }}
               >
                 <button className="underline relative top-2">Course details</button>
-                <ViewButton />
+                <ApplyNowbtn />
               </div>
             </div>
           </div>

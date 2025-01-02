@@ -91,3 +91,10 @@
 .slider-container1:hover .slider-track2 {
   animation-play-state: paused;
 }
+
+.active {
+  color: #1152ae;
+  font-weight:500;
+  text-decoration: underline;
+}
+
